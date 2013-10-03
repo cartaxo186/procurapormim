@@ -3,7 +3,7 @@
 return array(
 	'controllers' => array(
 		'invokables' => array(
-			'User\Controller\User' => 'User\Controller\UserController',
+            'User\Controller\User' => 'User\Controller\UserController',
 		),
 	),
 
@@ -46,6 +46,28 @@ return array(
             ),
 		),
 	),
+
+
+    // Componente para gerenciar arvores (menus, breadcrumbs, sitemaps, etc.)
+    'navigation' => array(
+        'default' => array(
+            array(
+                'label' => 'Criar uma conta',
+                'route' => 'criar-conta',
+            ),
+            array(
+                'label' => 'Login',
+                'route' => 'login',
+                'pages' => array(
+                    array(
+                        'label' => 'Esqueci Senha',
+                        'route' => 'login/esqueci-senha',
+                    ),
+                ),
+            ),
+        ),
+    ),
+
 
 	'view_manager' => array(
         'template_path_stack' => array(

@@ -4,7 +4,6 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index'      => 'Application\Controller\IndexController',
-            'Application\Controller\Login'      => 'Application\Controller\LoginController',
         ),
     ),
 
@@ -44,6 +43,7 @@ return array(
                 'label'  => 'Quem somos',
                 'route'  => 'home/action',
                 'action' => 'quem-somos',
+                'class' => 'cartuxo',
             ),
             array(
                 'label' => 'Dicas',
@@ -55,20 +55,20 @@ return array(
                 'route' => 'home/action',
                 'action' => 'estatisticas',
             ),
-            array(
-                'label' => 'Criar uma conta',
-                'route' => 'criar-conta',
-            ),
-            array(
-                'label' => 'Login',
-                'route' => 'login',
-                'pages' => array(
-                    array(
-                        'label' => 'Esqueci Senha',
-                        'route' => 'login/esqueci-senha',
-                    ),
-                ),
-            ),
+            // array(
+            //     'label' => 'Criar uma conta',
+            //     'route' => 'criar-conta',
+            // ),
+            // array(
+            //     'label' => 'Login',
+            //     'route' => 'login',
+            //     'pages' => array(
+            //         array(
+            //             'label' => 'Esqueci Senha',
+            //             'route' => 'login/esqueci-senha',
+            //         ),
+            //     ),
+            // ),
         ),
     ),
 
