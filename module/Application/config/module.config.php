@@ -55,20 +55,6 @@ return array(
                 'route' => 'home/action',
                 'action' => 'estatisticas',
             ),
-            // array(
-            //     'label' => 'Criar uma conta',
-            //     'route' => 'criar-conta',
-            // ),
-            // array(
-            //     'label' => 'Login',
-            //     'route' => 'login',
-            //     'pages' => array(
-            //         array(
-            //             'label' => 'Esqueci Senha',
-            //             'route' => 'login/esqueci-senha',
-            //         ),
-            //     ),
-            // ),
         ),
     ),
 
