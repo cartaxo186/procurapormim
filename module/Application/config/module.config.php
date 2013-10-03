@@ -69,7 +69,6 @@ return array(
         ),
         'factories' => array(
             'Navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
-            'Breadcrumb' => 'Zend\Navigation\Service\DefaultNavigationFactory',
         ),
     ),
 
