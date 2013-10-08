@@ -24,10 +24,7 @@ class CriarConta extends Form
             'type' => 'Zend\Form\Element\Select',
             'options' => array(
                 'label' => 'Tipo de conta',
-                'options' => array(
-                	0 => 'Pessoa Física',
-                	1 => 'Pessoa Juridica',
-                ),
+                'options' => $this->getOptionsForSelect($this->tipoUsuario, 'tipo'),
             ),
             'attributes' => array(
                 'class' => 'custom-select span4 no-margin mleft',
@@ -54,7 +51,6 @@ class CriarConta extends Form
             'type' => 'Zend\Form\Element\Text',
             'options' => array(
                 'label' => 'Data Nascimento',
-                'options' => $this->getOptionsForSelect($this->tipoUsuario, 'tipo')
             ),
             'attributes' => array(
                 'class' => 'span2',
