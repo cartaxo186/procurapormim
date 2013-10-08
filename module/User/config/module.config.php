@@ -7,7 +7,6 @@ return array(
 		),
 	),
 
-
 	'router' => array(
 		'routes' => array(
 			'criar-conta' => array(
@@ -16,7 +15,7 @@ return array(
                     'route' => '/criar-conta/',
                     'defaults' => array(
                         'controller' => 'User\Controller\User',
-                        'action' => 'criarConta'
+                        'action' => 'criarConta',
                     ),
                 ),
             ),
@@ -38,9 +37,20 @@ return array(
                             'route' => 'esqueci-senha/',
                             'defaults' => array(
                                 'controller' => 'User\Controller\User',
-                                'action' => 'esqueciSenha'
+                                'action' => 'esqueciSenha',
                             ),
                         ),
+                    ),
+                ),
+            ),
+
+            'minha-conta' => array(
+                'type' => 'literal',
+                'options' => array(
+                    'route' => '/minha-conta/',
+                    'defaults' => array(
+                        'controller' => 'User\Controller\User',
+                        'action' => 'minhaConta',
                     ),
                 ),
             ),

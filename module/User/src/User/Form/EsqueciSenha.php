@@ -5,14 +5,14 @@ namespace User\Form;
 use Zend\Form\Form;
 
 
-class EsqueciSenhaForm extends Form
+class EsqueciSenha extends Form
 {
     public function __construct($name = null)
     {
         parent::__construct('forgot_password');
 
 
-        // element: input | type: text | name: email
+        // Email
         $this->add(array(
             'name' => 'email',
             'type' => 'Zend\Form\Element\Text',
@@ -24,7 +24,7 @@ class EsqueciSenhaForm extends Form
             )
         ));
 
-        // element: input | type: submit | name: submit
+        // Submit
         $this->add (array(
             'name' => 'submit',
             'type' => 'Zend\Form\Element\Submit',

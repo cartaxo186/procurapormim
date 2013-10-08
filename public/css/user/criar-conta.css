@@ -1,6 +1,8 @@
 @import "../layout.css";
 
 
+#form-create-account fieldset legend { margin-top: 20px; }
+#form-create-account fieldset .radio { margin-top: 15px; }
 #form-create-account fieldset .radio + .radio { margin-left: 20px; }
 #form-create-account fieldset .agree { margin-top: 20px; }
 #form-create-account fieldset .custom-select .dropdown-menu { min-height: 60px !important; }
