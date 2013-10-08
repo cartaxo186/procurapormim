@@ -1,1 +1,4 @@
 @import "../layout.css";
+
+.login-form { width: 315px; margin-top: 50px; margin-left: auto; margin-right: auto; display: block; }
+.login-form:before { content: none; }

@@ -1,8 +1,31 @@
-<?php $this->headLink()->appendStylesheet($this->basePath() . '/css/user/login.css'); ?>
+<?php 
+	$this->headLink()->appendStylesheet($this->basePath() . '/css/user/login.css'); 
+
+
+	# Configuração do form
+	$form = $this->form;
+	$form->prepare();
+	$form->setAttribute('action', $this->url('login'));
+?>
 
 <article id="main" class="create-account inside">
 	<div class="container">
 
-		<h2>Login</h2>
+		<div class="login-form">
+			<?php echo $this->form()->openTag($form); ?>
+	    	    <div class="control-group">
+	        		<?php echo $this->formText($form->get('login')); ?>
+	         		<label for="login-name" class="login-field-icon fui-user"></label>
+	        	</div>
+
+	      	  	<div class="control-group">
+	     	    	<?php echo $this->formPassword($form->get('password')); ?>
+	        	    <label for="login-pass" class="login-field-icon fui-lock"></label>
+	    	    </div>
+
+		        <?php echo $this->formSubmit($form->get('submit')); ?>
+	    	<?php  echo $this->form()->closeTag(); ?>
+			<a href="<?php echo $this->url('login/esqueci-senha'); ?>" class="login-link">Esqueceu a senha?</a>
+     	</div>
 		
 </article>

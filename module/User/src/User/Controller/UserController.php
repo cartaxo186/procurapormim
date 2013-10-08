@@ -59,12 +59,11 @@ class UserController extends AbstractActionController
 
     public function loginAction()
     {
-        die("#sqn Haha");
-        // $form = new Login();
+        $form = new Login();
 
         return new ViewModel(
             array(
-                // 'form' => $form,
+                'form' => $form,
             )
         );
     }
