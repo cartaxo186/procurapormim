@@ -4,6 +4,7 @@ namespace User;
 
 use User\Model\TipoUsuarioTable;
 use User\Model\EstadoTable;
+use User\Model\UsuarioTable;
 
 
 class Module 
@@ -36,6 +37,11 @@ class Module
                 'table_estado' => function($sm) {
                     $adapter = $sm->get('zend_db_adapter');
                     $table = new EstadoTable($adapter);
+                    return $table;
+                },
+                'table_usuario' => function($sm) {
+                    $adapter = $sm->get('zend_db_adapter');
+                    $table = new UsuarioTable($adapter);
                     return $table;
                 },
             ),
