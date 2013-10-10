@@ -29,7 +29,8 @@ procurapormim:
           ✔ inserir "*" aos campos que possuem o atributo <data-required='true'> @marceloogeda @done (13-10-10 10:43)
           ✔ validar campos obrigatorios @marceloogeda @done (13-10-10 10:44)
           ✔ remover do campo a indicacao de erro, apos o usuario o preencher @marceloogeda @done (13-10-10 11:05)
-          ☐ exibir mensagem no topo do formulário caso possua campos obrigatorios sem preenchimento
+          ☐ checar se já existe um usuario cadastrado com o mesmo e-mail @marceloogeda
+          ☐ exibir mensagem no topo do formulário caso possua campos obrigatorios sem preenchimento @marceloogeda
         ☐ back-end
           ☐ exibir mensagem no topo do formulario caso uma das validacoes acima seja encontrada.
       ☐ controller
