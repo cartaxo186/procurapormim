@@ -1,0 +1,38 @@
+procurapormim:
+  << insert a description >>
+
+  Notes:
+    Anotacoes sobre configuracoes gerais.
+
+    Configuracao do banco de dados:
+    ✔ No diretorio, procurapormim > config > autoload > adicionar o seguinte arquivo. @done (13-10-10 11:38)
+    - https://gist.github.com/marceloogeda/82d4cb87ee6785e0e147
+    ✔ No atribulo "username" e "password", os valores estão em branco, é necessário que vocês adicionem conforme o acesso ao banco de dados de vocês. @done (13-10-10 11:38)
+
+    ☐ O banco de dados se encontra no seguinte diretorio, procurapormim > data.
+    ☐ O arquivo é o procurapormim.sql, vocês terão que importa-lo ao banco de vocês.
+
+
+  User:
+    criar-conta:
+      ☐ form
+        ✔ criar o form usando o Zend Form @marceloogeda @done (13-10-10 11:07)
+        ✔ adicionar o atributo 'data-required' passando o valor 'true' nos campos que forem de preenchimento obrigatorio. @marceloogeda @done (13-10-10 11:09)
+        ☐ criar o Filter usando o InputFilterAwareInterface do Zend
+          ☐ validar campos obrigatorios
+          ☐ validar email
+          ☐ validar confirmacao de senha, o mesmo sendo identico ao valor passado no campo
+      ☐ view
+        ✔ assinar no template o form @marceloogeda @done (13-10-10 11:17)
+      ☐ validacao
+        ☐ front-end
+          ✔ inserir "*" aos campos que possuem o atributo <data-required='true'> @marceloogeda @done (13-10-10 10:43)
+          ✔ validar campos obrigatorios @marceloogeda @done (13-10-10 10:44)
+          ✔ remover do campo a indicacao de erro, apos o usuario o preencher @marceloogeda @done (13-10-10 11:05)
+          ☐ exibir mensagem no topo do formulário caso possua campos obrigatorios sem preenchimento
+        ☐ back-end
+          ☐ exibir mensagem no topo do formulario caso uma das validacoes acima seja encontrada.
+      ☐ controller
+        ☐ criar criptografia de senha @marceloogeda 
+
+
