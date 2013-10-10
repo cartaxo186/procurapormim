@@ -26,6 +26,9 @@ $(function() {
  	var hidden = $("#hiddenSexo");
 
  	$("input[name='sexo']").parent("label").click(function() {
+ 		if ($(this).parent(".control-group").hasClass("error")) {
+ 			console.log($(this).parent(".control-group").removeClass("error"));
+ 		}
  		hidden.val($(this).children("input").val());
  	});
  }
@@ -34,7 +37,7 @@ $(function() {
 
  var inputMask = function() {
  	// Mask : data_nascimento
- 	$("input[name='data_nasc']").mask("99/99/9999");
+ 	$("input[name='data_nascimento']").mask("99/99/9999");
 
  	// Mask telefone
 	$("input[name='telefone']").mask("(99) 9999-9999");

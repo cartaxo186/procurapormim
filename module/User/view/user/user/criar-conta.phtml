@@ -8,7 +8,8 @@
 						 ->appendFile($this->basePath() . '/js/flatui-checkbox.js')
 						 ->appendFile($this->basePath() . '/js/application.js')
 						 ->appendFile($this->basePath() . '/js/jquery.maskedinput.js')
-						 ->appendFile($this->basePath() . '/js/user/criar-conta.js');
+						 ->appendFile($this->basePath() . '/js/user/criar-conta.js')
+						 ->appendFile($this->basePath() . '/js/form-valid.js');
 
 	# Configuração do form
 	$form = $this->form;
@@ -21,26 +22,26 @@
 
 		<h2>Cadastre-se</h2>
 		<p>Crie uma conta ou se preferir use seu login do <a href="javascript:void(0);">Facebook</a>.</p>
-		
+
 		<?php echo $this->form()->openTag($form); ?>
 			<fieldset>
 				<legend>Dados Pessoais</legend>
 
-				<div class="clearfix">
+				<div class="clearfix control-group">
 					<?php 
 						echo $this->formLabel($form->get('tipo_conta'));
 						echo $this->formSelect($form->get('tipo_conta'));
 					?>
 				</div>
 
-				<div class="span8 inline-block no-margin mleft">
+				<div class="span8 inline-block no-margin mleft control-group">
 					<?php 
 						echo $this->formLabel($form->get('nome'));
 						echo $this->formText($form->get('nome'));
 					?>
 				</div>
 
-				<div class="span3 inline-block">
+				<div class="span3 inline-block control-group">
 					<label>Sexo</label>								
 			    	<label class="radio inline-block">
 		            	<span class="icons">
@@ -56,17 +57,17 @@
 		            	</span>
 		            	<input type="radio" data-toggle="radio" value="F" name="sexo"> Feminino
 		          	</label>
-					<input id="hiddenSexo" type="hidden" name="sexo" value="" />
+					<input id="hiddenSexo" type="hidden" data-required="true" name="sexo" value="" />
 				</div>
 			</fieldset>
 
 			<fieldset>
-				<div class="span2 inline-block no-margin mleft">
-					<?php echo $this->formLabel($form->get('data_nasc'));
-						  echo $this->formText($form->get('data_nasc')); ?>
+				<div class="span2 inline-block no-margin mleft control-group">
+					<?php echo $this->formLabel($form->get('data_nascimento'));
+						  echo $this->formText($form->get('data_nascimento')); ?>
 				</div>
 
-				<div class="span6 inline-block">
+				<div class="span6 inline-block control-group">
 					<?php echo $this->formLabel($form->get('email'));
 						  echo $this->formText($form->get('email')); ?>
 				</div>
@@ -75,12 +76,12 @@
 			<fieldset>
 				<legend>Contato</legend>
 
-				<div class="span3 inline-block no-margin mleft">
+				<div class="span3 inline-block no-margin mleft control-group">
 					<?php echo $this->formLabel($form->get('telefone'));
 						  echo $this->formText($form->get('telefone')); ?>
 				</div>
 
-				<div class="span3 inline-block">
+				<div class="span3 inline-block control-group">
 					<?php echo $this->formLabel($form->get('celular'));
 						  echo $this->formText($form->get('celular')); ?>
 				</div>
@@ -89,41 +90,43 @@
 			<fieldset>
 				<legend>Endereço</legend>
 
-				<?php echo $this->formLabel($form->get('cep'));
-					  echo $this->formText($form->get('cep')); ?>
+				<div class="clearfix control-group">
+					<?php echo $this->formLabel($form->get('cep'));
+						  echo $this->formText($form->get('cep')); ?>
+				</div>
 			</fieldset>
 
 			<fieldset>
-				<div class="span8 inline-block no-margin mleft">
+				<div class="span8 inline-block no-margin mleft control-group">
 					<?php echo $this->formLabel($form->get('endereco'));
 					 	  echo $this->formText($form->get('endereco')); ?>
 				</div>
 
-				<div class="span2 inline-block">
+				<div class="span2 inline-block control-group">
 					<?php echo $this->formLabel($form->get('numero'));
 						  echo $this->formText($form->get('numero')); ?>
 				</div>
 			</fieldset>
 
 			<fieldset>
-				<div class="span4 inline-block no-margin mleft">
+				<div class="span4 inline-block no-margin mleft control-group">
 					<?php echo $this->formLabel($form->get('complemento'));
 						  echo $this->formText($form->get('complemento')); ?>
 				</div>
 
-				<div class="span4 inline-block">
+				<div class="span4 inline-block control-group">
 					<?php echo $this->formLabel($form->get('bairro'));
 						  echo $this->formText($form->get('bairro')); ?>
 				</div>
 			</fieldset>
 
 			<fieldset>
-				<div class="span4 inline-block no-margin mleft">
+				<div class="span4 inline-block no-margin mleft control-group">
 					<?php echo $this->formLabel($form->get('cidade'));
 						  echo $this->formText($form->get('cidade')); ?>
 				</div>
 
-				<div class="span2 inline-block">
+				<div class="span2 inline-block control-group">
 					<?php echo $this->formLabel($form->get('estado'));
 						  echo $this->formSelect($form->get('estado')); ?>
 				</div>
@@ -131,12 +134,12 @@
 
 			<fieldset>
 				<legend>Acesso</legend>
-				<div class="span4 inline-block no-margin mleft">
+				<div class="span4 inline-block no-margin mleft control-group">
 					<?php echo $this->formLabel($form->get('senha'));
 						  echo $this->formPassword($form->get('senha')); ?>
 				</div>
 
-				<div class="span4 inline-block">
+				<div class="span4 inline-block control-group">
 					<?php echo $this->formLabel($form->get('confirmar_senha'));
 					 	  echo $this->formPassword($form->get('confirmar_senha')); ?>
 				</div>

@@ -43,7 +43,7 @@ class CriarContaFilter implements InputFilterAwareInterface
 			$inputFilter->add(
 				$factory->createInput(
 					array(
-						'name' => 'data_nasc',
+						'name' => 'data_nascimento',
 						'required' => true,
 						'validators' => array( 
 							$this->notEmpty('Data Nascimento')

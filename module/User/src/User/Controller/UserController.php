@@ -10,10 +10,12 @@ use User\Form\EsqueciSenha;
 use User\Form\Login;
 use User\Model\Estado;
 use User\Model\TipoUsuario;
+use User\Model\Usuario;
 
 
 class UserController extends AbstractActionController
 {
+    protected $table_usuario;
     protected $table_usuario_tipo;
     protected $table_estado;
 
@@ -39,7 +41,21 @@ class UserController extends AbstractActionController
             $form->setData($data);
 
             if ($form->isValid()) :
-                return $this->redirect()->toRoute('minha-conta');
+                $usuario = new Usuario();
+                $usuario->exchangeArray($data);
+
+                $name = explode(" ", $this->params()->fromPost('nome'));
+
+                if ($this->getTable($this->table_usuario, 'table_usuario')->save($usuario)) :
+                    $message = array(
+                        "title" => "Cadastro realizado com sucesso!",
+                        "name" => $name[0],
+                        "description" => "seu login já se encontra disponível em nossa aplicação.",
+                    );
+
+                    $this->flashMessenger()->addSuccessMessage($message);
+                    $this->redirect()->toRoute('login');
+                endif;
             else :
                 echo "<pre>";
                 print_r($data);
@@ -47,7 +63,6 @@ class UserController extends AbstractActionController
 
                 var_dump($form->getMessages());
             endif;
-
         endif;
 
         return new ViewModel(
@@ -60,6 +75,20 @@ class UserController extends AbstractActionController
     public function loginAction()
     {
         $form = new Login();
+
+        $flashMessenger = $this->flashMessenger();
+
+        if ($flashMessenger->hasSuccessMessages()) :
+            return new ViewModel(
+                array(
+                    'form' => $form,
+                    'message' => array(
+                        'type' => 'success',
+                        'value' => $flashMessenger->getSuccessMessages(),
+                    )
+                )
+            );
+        endif;
 
         return new ViewModel(
             array(

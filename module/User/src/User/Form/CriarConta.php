@@ -28,6 +28,7 @@ class CriarConta extends Form
             ),
             'attributes' => array(
                 'class' => 'custom-select span4 no-margin mleft',
+                'data-required' => "true",
             )
         ));
 
@@ -41,19 +42,21 @@ class CriarConta extends Form
             ),
             'attributes' => array(
                 'class' => 'span8',
+                'data-required' => "true",
             )
         ));
 
 
         // Data Nascimento
         $this->add(array(
-            'name' => 'data_nasc',
+            'name' => 'data_nascimento',
             'type' => 'Zend\Form\Element\Text',
             'options' => array(
                 'label' => 'Data Nascimento',
             ),
             'attributes' => array(
                 'class' => 'span2',
+                'data-required' => "true",
             )
         ));
 
@@ -67,6 +70,7 @@ class CriarConta extends Form
             ),
             'attributes' => array(
                 'class' => 'span6',
+                'data-required' => "true",
             )
         ));
 
@@ -106,6 +110,7 @@ class CriarConta extends Form
             ),
             'attributes' => array(
                 'class' => 'span3',
+                'data-required' => "true",
             )
         ));
 
@@ -119,6 +124,7 @@ class CriarConta extends Form
             ),
             'attributes' => array(
                 'class' => 'span8',
+                'data-required' => "true",
             )
         ));
 
@@ -132,6 +138,7 @@ class CriarConta extends Form
             ),
             'attributes' => array(
                 'class' => 'span2',
+                'data-required' => "true",
             )
         ));
 
@@ -158,6 +165,7 @@ class CriarConta extends Form
             ),
             'attributes' => array(
                 'class' => 'span4',
+                'data-required' => "true",
             )
         ));
 
@@ -171,6 +179,7 @@ class CriarConta extends Form
             ),
             'attributes' => array(
                 'class' => 'span4',
+                'data-required' => "true",
             )
         ));
 
@@ -185,6 +194,7 @@ class CriarConta extends Form
             ),
             'attributes' => array(
                 'class' => 'custom-select span4',
+                'data-required' => "true",
             )
         ));
 
@@ -198,6 +208,7 @@ class CriarConta extends Form
             ),
             'attributes' => array(
                 'class' => 'span4',
+                'data-required' => "true",
             )
         ));
 
@@ -211,6 +222,7 @@ class CriarConta extends Form
             ),
             'attributes' => array(
                 'class' => 'span4',
+                'data-required' => "true",
             )
         ));
 

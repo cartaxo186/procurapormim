@@ -11,6 +11,14 @@
 <article id="main" class="create-account inside">
 	<div class="container">
 
+		<?php if(isset($this->message)) : ?>
+		    <div class="alert alert-<?php echo $this->message["type"]; ?>">
+		    	<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<h4><?php echo $this->message["value"][0]["title"]; ?></h4>
+				<p><strong><?php echo $this->message["value"][0]["name"]; ?></strong>, <?php echo $this->message["value"][0]["description"]; ?></p>
+			</div>
+		<?php endif; ?>
+
 		<div class="login-form">
 			<?php echo $this->form()->openTag($form); ?>
 	    	    <div class="control-group">

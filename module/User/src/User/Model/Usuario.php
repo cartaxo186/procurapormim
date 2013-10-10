@@ -28,7 +28,7 @@ class Usuario
 	public function exchangeArray($data)
 	{
 		$this->id 				= (isset($data['id'])) ? $data['id'] : null;
-		$this->usuario_tipo_id	= (isset($data['usuario_tipo_id'])) ? $data['usuario_tipo_id'] : null;
+		$this->usuario_tipo_id	= (isset($data['tipo_conta'])) ? $data['tipo_conta'] : null;
 		$this->nome				= (isset($data['nome'])) ? $data['nome'] : null;
 		$this->sexo				= (isset($data['sexo'])) ? $data['sexo'] : null;
 		$this->data_nascimento	= (isset($data['data_nascimento'])) ? $data['data_nascimento'] : null;
@@ -41,10 +41,10 @@ class Usuario
 		$this->complemento 	 	= (isset($data['complemento'])) ? $data['complemento'] : null;
 		$this->bairro 		 	= (isset($data['bairro'])) ? $data['bairro'] : null;
 		$this->cidade 		 	= (isset($data['cidade'])) ? $data['cidade'] : null;
-		$this->estado_id 	 	= (isset($data['estado_id'])) ? $data['estado_id'] : null;
+		$this->estado_id 	 	= (isset($data['estado'])) ? $data['estado'] : null;
 		$this->senha 	 		= (isset($data['senha'])) ? $data['senha'] : null;
-		$this->notificacao 	 	= (isset($data['notificacao'])) ? $data['notificacao'] : null;
+		$this->notificacao 	 	= (isset($data['noticicacoes'])) ? $data['noticicacoes'] : null;
 		$this->data_cadastro 	= (isset($data['data_cadastro'])) ? $data['data_cadastro'] : null;
-		$this->status 			= (isset($data['status'])) ? $data['status'] : null;
+		$this->status 			= (isset($data['status'])) ? $data['status'] : 1;
 	}
 }
