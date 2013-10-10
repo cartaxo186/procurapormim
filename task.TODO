@@ -2,24 +2,15 @@ procurapormim:
   << insert a description >>
 
   Notes:
-<<<<<<< HEAD
-    Anotacoes sobre configuracoes gerais.
-=======
     Notes about config global.
->>>>>>> 388251e9096bd9c7e058ea2ca0a922c723f9353d
 
     Configuracao do banco de dados:
     ✔ No diretorio, procurapormim > config > autoload > adicionar o seguinte arquivo. @done (13-10-10 11:38)
     - https://gist.github.com/marceloogeda/82d4cb87ee6785e0e147
     ✔ No atribulo "username" e "password", os valores estão em branco, é necessário que vocês adicionem conforme o acesso ao banco de dados de vocês. @done (13-10-10 11:38)
 
-<<<<<<< HEAD
-    ☐ O banco de dados se encontra no seguinte diretorio, procurapormim > data.
-    ☐ O arquivo é o procurapormim.sql, vocês terão que importa-lo ao banco de vocês.
-=======
     ✔ O banco de dados se encontra no seguinte diretorio, procurapormim > data. @done (13-10-10 11:39)
     ✔ O arquivo é o procurapormim.sql, vocês terão que importa-lo ao banco de vocês. @done (13-10-10 11:39)
->>>>>>> 388251e9096bd9c7e058ea2ca0a922c723f9353d
 
 
   User:
@@ -41,10 +32,7 @@ procurapormim:
           ☐ exibir mensagem no topo do formulário caso possua campos obrigatorios sem preenchimento
         ☐ back-end
           ☐ exibir mensagem no topo do formulario caso uma das validacoes acima seja encontrada.
-<<<<<<< HEAD
       ☐ controller
-        ☐ criar criptografia de senha @marceloogeda 
-=======
->>>>>>> 388251e9096bd9c7e058ea2ca0a922c723f9353d
+        ☐ criar criptografia de senha @marceloogeda
 
 
