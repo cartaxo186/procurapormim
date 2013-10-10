@@ -63,13 +63,6 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
---  Records of `usuario`
--- ----------------------------
-BEGIN;
-INSERT INTO `usuario` VALUES ('3', '1', 'Marcelo Ogeda', 'M', '0000-00-00', 'marcelo.ogeda@gmail.com', '', '(11) 96282-950', '06144-350', 'Rua Pedro Alvares Cabral', '229', '', 'Jardim Veloso', 'Osasco', '26', '123mudar', '1', '2013-10-09 16:59:45', '1'), ('5', '1', 'Brunno Cartax', 'M', '0000-00-00', 'brunno.cartaxo@gmail.com', '(11) 3621-211', '(11) 99875-356', '05103-010', 'Rua Pregrave do Amaral', '146', '', 'Vila dos Remédios', 'São Paulo', '26', 'asd123', '1', '2013-10-09 19:34:00', '1'), ('6', '1', 'Apuu Júnior', 'F', '0000-00-00', 'apu.jr@gmail.com', '', '(00) 00000-000', '00000-000', 'Avenida Imperatriz', 's/n', '', 'Vila Leopoldina', 'São Paulo', '1', 'xxxx', '1', '2013-10-09 20:02:04', '1'), ('7', '1', 'maria rosilene', 'F', '0000-00-00', 'marial@umc.br', '(11) 3333-333', '(11) 44444-444', '22222-222', 'Rua Pedro Alvares Cabral', '10', '', 'Vila Leopoldina', 'São Paulo', '26', 'xxx', '1', '2013-10-09 20:28:43', '1');
-COMMIT;
-
--- ----------------------------
 --  Table structure for `usuario_tipo`
 -- ----------------------------
 DROP TABLE IF EXISTS `usuario_tipo`;
@@ -79,12 +72,5 @@ CREATE TABLE `usuario_tipo` (
   `status` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-
--- ----------------------------
---  Records of `usuario_tipo`
--- ----------------------------
-BEGIN;
-INSERT INTO `usuario_tipo` VALUES ('1', 'Pessoa Física', '1'), ('2', 'Pessoa Juridica', '1');
-COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
